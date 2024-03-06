@@ -1,0 +1,14 @@
+.rounded-button {
+    border: none;
+    border-radius: 20px; /* Ajusta el valor según el radio de redondeo que desees */
+    background-color: blue; /* Color de fondo azul */
+    color: white; /* Color de texto blanco */
+    padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer;
+  }
+  
+  .rounded-button:hover {
+    background-color: darkblue; /* Cambia el color de fondo al pasar el mouse */
+  }
+  

@@ -1,0 +1,56 @@
+<div class="card m-5">
+    <div class="card-header">
+        {{this.isNew ? "Register Reservas" : "Update Reservas"}}
+    </div>
+    <div class="card-body">
+        <form (ngSubmit)="submitReservas(forma)" #forma="ngForm" class="row g-3">
+            
+            <div class="col-md-6">
+                <label for="label-AreaID" class="form-label">AreaID:</label>"
+                <input #inputareaID="ngModel" type="text" name="AreaID"
+                    [ngClass]="{'is-invalid': inputareaID.touched && inputareaID.hasError('required') }"
+                    [(ngModel)]="reservas.areaID" class="form-control" id="AreaID" value="" required>
+                <div class="invalid-feedback">
+                    Field required
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="label-UsuarioEmail" class="form-label">UsuarioEmail:</label>"
+                <input #inputusuarioEmail="ngModel" type="text" name="UsuarioEmail"
+                    [ngClass]="{'is-invalid': inputusuarioEmail.touched && inputusuarioEmail.hasError('required') }"
+                    [(ngModel)]="reservas.usuarioEmail" class="form-control" id="UsuarioEmail" value="" required>
+                <div class="invalid-feedback">
+                    Field required
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="label-FechaInicio" class="form-label">Fecha y Hora de Inicio:</label>
+                <input #inputfechaInicio="ngModel" type="datetime-local" name="FechaInicio"
+                    [ngClass]="{'is-invalid': inputfechaInicio.touched && inputfechaInicio.hasError('required') }"
+                    [(ngModel)]="reservas.fechaInicio" class="form-control" id="FechaInicio" value="" required>
+                <div class="invalid-feedback">
+                    Field required
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="label-FechaFin" class="form-label">Fecha y Hora de Fin:</label>
+                <input #inputfechaFin="ngModel" type="datetime-local" name="FechaFin"
+                    [ngClass]="{'is-invalid': inputfechaFin.touched && inputfechaFin.hasError('required') }"
+                    [(ngModel)]="reservas.fechaFin" class="form-control" id="FechaFin" value="" required>
+                <div class="invalid-feedback">
+                    Field required
+                </div>
+            </div>
+            
+            <div class="col-12 text-center">
+                <button class=" btn btn-primary" type="submit" [disabled]="forma.invalid">{{this.isNew ? "Register" :
+                    "Update"}}</button>
+                <button style="margin-left: 10px;" class=" btn btn-danger" type="button"
+                    (click)="limpiarForm(forma)">Clear</button>
+                <button *ngIf="!this.isNew" style="margin-left: 10px;" class=" btn btn-danger" type="button"
+                    (click)="emitChange.emit()">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+<router-outlet></router-outlet>
