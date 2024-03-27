@@ -1,14 +1,72 @@
+/* styles.css */
+/* Estilos para la barra de navegación */
+.navbar {
+  background-color: #ffffff; /* Azul oscuro */
+}
+
+.navbar-brand {
+  color: #ffffff; /* Texto blanco */
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff; /* Texto blanco */
+}
+
 .rounded-button {
-    border: none;
-    border-radius: 20px; /* Ajusta el valor según el radio de redondeo que desees */
-    background-color: blue; /* Color de fondo azul */
-    color: white; /* Color de texto blanco */
-    padding: 10px 20px; /* Ajusta el relleno según sea necesario */
-    font-size: 16px; /* Tamaño de fuente */
-    cursor: pointer;
-  }
-  
+  border: none;
+  border-radius: 20px; /* Ajusta el valor según el radio de redondeo que desees */
+  background-color: #112989;
+  color: white; /* Color de texto blanco */
+  padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer;
+}
+
   .rounded-button:hover {
     background-color: darkblue; /* Cambia el color de fondo al pasar el mouse */
   }
-  
+
+.custom-icon {
+  font-size: 30px; /* Tamaño personalizado */
+}
+
+//////
+/* Estilos para las tarjetas */
+.card {
+  margin-bottom: 20px;
+}
+
+.card-header {
+  background-color: #112989; /* Azul oscuro */
+  color: #ffffff; /* Texto blanco */
+  text-align: center;
+  font-size: 16px;
+}
+
+.card-body {
+  background-color: #F1F3F6; /* Color de fondo gris claro en tarjetas*/
+  color: #112989; /* Color de texto*/
+  align-items: center;
+  text-align: center;
+}
+
+
+/* Estilos para el botón de reservar */
+.rounded-button {
+  border: none;
+  border-radius: 20px; /* Ajusta el valor según el radio de redondeo que desees */
+  background-color: #112989; /* Azul oscuro */
+  color: #ffffff; /* Texto blanco */
+  padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer;
+}
+
+  .rounded-button:hover {
+    background-color: #0d1a66; /* Cambia el color de fondo al pasar el mouse */
+  }
+
+.custom-icon {
+  font-size: 50px; /* Tamaño personalizado para los iconos en las tarjetas */
+  color: #ffffff; /* Color de texto blanco */
+}

@@ -1,12 +1,12 @@
 <div class="card m-5">
-    <div class="card-header">
-        {{this.isNew ? "Register Reservas" : "Update Reservas"}}
+    <div class="card-header justify-content-center d-flex">
+        {{this.isNew ? "Registrar Reserva" : "Update Reservaa"}}
     </div>
     <div class="card-body">
         <form (ngSubmit)="submitReservas(forma)" #forma="ngForm" class="row g-3">
             
             <div class="col-md-6">
-                <label for="label-AreaID" class="form-label">AreaID:</label>"
+                <label for="label-AreaID" class="form-label">ID de area:</label>
                 <input #inputareaID="ngModel" type="text" name="AreaID"
                     [ngClass]="{'is-invalid': inputareaID.touched && inputareaID.hasError('required') }"
                     [(ngModel)]="reservas.areaID" class="form-control" id="AreaID" value="" required>
@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <label for="label-UsuarioEmail" class="form-label">UsuarioEmail:</label>"
+                <label for="label-UsuarioEmail" class="form-label">Correo de usuario:</label>
                 <input #inputusuarioEmail="ngModel" type="text" name="UsuarioEmail"
                     [ngClass]="{'is-invalid': inputusuarioEmail.touched && inputusuarioEmail.hasError('required') }"
                     [(ngModel)]="reservas.usuarioEmail" class="form-control" id="UsuarioEmail" value="" required>
@@ -43,10 +43,10 @@
             </div>
             
             <div class="col-12 text-center">
-                <button class=" btn btn-primary" type="submit" [disabled]="forma.invalid">{{this.isNew ? "Register" :
+                <button class="btn btn-primary btn-custom" type="submit" [disabled]="forma.invalid">{{this.isNew ? "Añadir reserva" :
                     "Update"}}</button>
                 <button style="margin-left: 10px;" class=" btn btn-danger" type="button"
-                    (click)="limpiarForm(forma)">Clear</button>
+                    (click)="limpiarForm(forma)">Limpiar formulario</button>
                 <button *ngIf="!this.isNew" style="margin-left: 10px;" class=" btn btn-danger" type="button"
                     (click)="emitChange.emit()">Cancel</button>
             </div>

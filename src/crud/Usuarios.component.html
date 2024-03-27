@@ -1,8 +1,11 @@
+<nav class="navbar navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-brand">Registro de usuarios</div>
+    <button class="navbar-button" routerLink="/land">Regresar</button>
+  </div>
+</nav>
+
 <div class="container-fluid">
-  <div class="col-2 mt-4">
-    <a href="/land">
-        <button class="rounded-button">atras</button>
-    </a>
 
 </div>
     <div class="row">
@@ -14,16 +17,16 @@
         </div>
         <div class="col-6 mt-5">
             <div class="card">
- <input style="background-color:rgb(157, 223, 173)" type="search" [(ngModel)]="searchTerm" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-<div class="card-header">Table of Usuarios</div><div class="card-body" style="overflow-x: auto;"><div class="card-body">
+              <div class="card-header">Tabla de usuarios</div><div class="card-body" style="overflow-x: auto;"><div class="card-body">
+  <input style="background-color:rgb(231, 231, 231)" type="search" [(ngModel)]="searchTerm" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
           <table class="table table-white table-striped">
               <thead>
                 <tr>
-<th scope="col">#</th>
-<th scope="col">Email</th>
-<th scope="col">Nombre</th>
-<th scope="col">Contrasena</th>
-<th scope="col">Cuatrimestre</th>
+<th scope="col" class="custom-header">#</th>
+<th scope="col" class="custom-header">Email</th>
+<th scope="col" class="custom-header">Nombre</th>
+<th scope="col" class="custom-header">Contrasena</th>
+<th scope="col" class="custom-header">Cuatrimestre</th>
 
 <th scope="col">Update</th>
             <th scope="col">Delete</th>
