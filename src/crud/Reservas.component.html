@@ -1,12 +1,12 @@
 <nav class="navbar navbar-custom">
   <div class="container-fluid">
+    <button class="navbar-button" routerLink="/land"><i class="bi bi-caret-left-fill"></i>Regresar</button>
     <div class="navbar-brand">Reservas</div>
-    <button class="navbar-button" routerLink="/land">Regresar</button>
   </div>
 </nav>
 
 <!-- Div para centrar elementos -->
-<div class="container-fluid d-flex justify-content-center align-items-center flex-column">
+<div class="justify-content-center align-items-center flex-column">
   
     <div class="row justify-content-center">
         <div class="col-lg-12" *ngIf="!mostrarActualizar">
@@ -17,21 +17,21 @@
         </div>
     </div>
 
-        <div class="col-10 mt-5">
-            <div class="card">
-              <div class="card-header">Espacios reservados</div><div class="card-body" style="overflow-x: auto;"><div class="card-body">
+        <div class="col-12 mt-5">
+            <div class="card mt-1">
+              <div class="card-header">Espacios actualmente reservados</div><div class="card-body" style="overflow-x: auto;"><div class="card-body">
   <input style="background-color:rgb(245, 240, 240)" type="search" [(ngModel)]="searchTerm" class="form-control rounded" placeholder="Buscar área reservada" aria-label="Search" aria-describedby="search-addon" />
           <table class="table table-white table-striped">
             <thead>
               <tr>
                 <th scope="col" class="custom-header">#</th>
                 <th scope="col" class="custom-header">ID</th>
-                <th scope="col" class="custom-header">AreaID</th>
-                <th scope="col" class="custom-header">UsuarioEmail</th>
-                <th scope="col" class="custom-header">FechaInicio</th>
-                <th scope="col" class="custom-header">FechaFin</th>
-                <th scope="col" class="custom-header">Update</th>
-                <th scope="col" class="custom-header">Delete</th>
+                <th scope="col" class="custom-header">ID de Area</th>
+                <th scope="col" class="custom-header">Correo de usuario</th>
+                <th scope="col" class="custom-header">Fecha Inicio</th>
+                <th scope="col" class="custom-header">Fecha Fin</th>
+                <th scope="col" class="custom-header">Editar</th>
+                <th scope="col" class="custom-header">Borrar</th>
               </tr>
             </thead>
             

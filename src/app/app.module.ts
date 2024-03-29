@@ -13,26 +13,31 @@ import { UsuariosDetailComponent } from 'src/crud/Usuarios-detail.component';
 import { LogComponent } from './log/log.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
+import { InfoUsuarioComponent } from 'src/crud/info-usuario.component';
+import { NavbarComponent } from "./navbar/navbar.component";
  @NgModule({
-  declarations: [
-    AppComponent,
-    AreasComunesComponent,
-    AreasComunesDetailComponent,
-    ReservasComponent,
-    ReservasDetailComponent,
-    UsuariosComponent,
-    UsuariosDetailComponent,
-    LogComponent,
-    LoginComponent,
- ],
-imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        AreasComunesComponent,
+        AreasComunesDetailComponent,
+        ReservasComponent,
+        ReservasDetailComponent,
+        UsuariosComponent,
+        UsuariosDetailComponent,
+        LogComponent,
+        LoginComponent,
+        InfoUsuarioComponent,
+        NavbarComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule
+    ]
 })
 export class AppModule { }

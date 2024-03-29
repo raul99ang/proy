@@ -10,7 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { LogComponent } from './log/log.component';
 import { from } from 'rxjs';
 import { InfoUsuarioComponent } from 'src/crud/info-usuario.component';
-import { RegisterComponent } from './register/register.component';
+
 const routes: Routes = [
 {path: '',component:LoginComponent},
 {path: 'land',component:LogComponent},
@@ -19,8 +19,7 @@ const routes: Routes = [
 {path: 'Reservas', component:ReservasComponent}, 
 {path: 'Usuarios', component:UsuariosComponent}, 
 {path: 'resdet', component:ReservasDetailComponent},
-{path: 'register', component:RegisterComponent}, 
-{path: 'InfoUsuarios', component:InfoUsuarioComponent}
+{path: 'InfoUsuario', component:InfoUsuarioComponent}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

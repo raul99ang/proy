@@ -1,6 +1,7 @@
-<div class="card m-5">
+<app-navbar></app-navbar>
+<div class="card mt-5">
     <div class="card-header justify-content-center d-flex">
-        {{this.isNew ? "Registrar Reserva" : "Update Reservaa"}}
+        {{this.isNew ? "Registrar reserva" : "Actualizar Reserva"}}
     </div>
     <div class="card-body">
         <form (ngSubmit)="submitReservas(forma)" #forma="ngForm" class="row g-3">

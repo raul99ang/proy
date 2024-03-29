@@ -1,35 +1,37 @@
 <nav class="navbar navbar-custom">
   <div class="container-fluid">
+    <button class="navbar-button" routerLink="/land"><i class="bi bi-caret-left-fill"></i>Regresar</button>
     <div class="navbar-brand">Registro de usuarios</div>
-    <button class="navbar-button" routerLink="/land">Regresar</button>
   </div>
 </nav>
 
-<div class="container-fluid">
-
-</div>
     <div class="row">
-        <div class="col-6" *ngIf="!mostrarActualizar">
+        <div class="col-12" *ngIf="!mostrarActualizar">
             <app-Usuarios-detail (emitChange)="restableceRegistro()"></app-Usuarios-detail>
         </div>
         <div class="col-6" *ngIf="mostrarActualizar">
             <app-Usuarios-detail [id]="id" (emitChange)="restableceRegistro()"></app-Usuarios-detail>
         </div>
-        <div class="col-6 mt-5">
+        <div class="col-12 mt-5">
             <div class="card">
-              <div class="card-header">Tabla de usuarios</div><div class="card-body" style="overflow-x: auto;"><div class="card-body">
+              <div class="card-header">Tabla de usuarios registrados</div><div class="card-body" style="overflow-x: auto;"><div class="card-body">
   <input style="background-color:rgb(231, 231, 231)" type="search" [(ngModel)]="searchTerm" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
           <table class="table table-white table-striped">
               <thead>
-                <tr>
-<th scope="col" class="custom-header">#</th>
-<th scope="col" class="custom-header">Email</th>
-<th scope="col" class="custom-header">Nombre</th>
-<th scope="col" class="custom-header">Contrasena</th>
-<th scope="col" class="custom-header">Cuatrimestre</th>
+                <tr class="custom-header">
+<th scope="col">#</th>
+<th scope="col">Correo</th>
+<th scope="col">Nombre</th>
+<th scope="col">Matricula</th>
+<th scope="col">Contraseña</th>
+<th scope="col">Cuatrimestre</th>
+<th scope="col">Carrera</th>
+<th scope="col">Horas Semanales</th>
+<th scope="col">Taller</th>
+<th scope="col">Cuenta con equipo</th>
 
-<th scope="col">Update</th>
-            <th scope="col">Delete</th>
+<th scope="col">Editar</th>
+<th scope="col">Borrar</th>
  </tr>
               </thead>
 <tbody class="table-group-divider" >

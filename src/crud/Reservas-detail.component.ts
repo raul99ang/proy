@@ -10,6 +10,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./Reservas-detail.component.css']
 })
 export class ReservasDetailComponent implements OnInit {
+    
 @Input() id: number = 0;
         isNew: boolean = false;
 

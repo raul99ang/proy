@@ -4,7 +4,7 @@
   }
   
 .btn-custom:hover {
-    background-color: #1C4B80 !important;
+  background-color: #1C4B80 !important;
   color: #ffffff !important;
 }
 
@@ -17,4 +17,9 @@
 .form-label{
   color: #112989;
   font-weight: 600;
+}
+
+.card{
+  margin-left: 30px;
+  margin-right: 30px;
 }
