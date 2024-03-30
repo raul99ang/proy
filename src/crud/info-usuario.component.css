@@ -45,3 +45,7 @@
   opacity: 0.4; /* Puedes ajustar este valor de 0 a 1 para cambiar la opacidad */
   margin-left: 50px;
 }
+
+.contactos{
+  text-align: center;
+}
